@@ -49,7 +49,7 @@ export default function Home() {
               className="problem-image"
               width={400}
               height={320}
-              style={{ objectFit: "cover" }} // レイアウトシフトを防ぐためのスタイル
+              style={{ objectFit: "cover" }}
             />
             <div>
               <p>
