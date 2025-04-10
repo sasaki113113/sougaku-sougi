@@ -4,7 +4,7 @@ export default function Home() {
       {/* ヘッダー */}
       <header className="header">
         <div className="header-container container">
-          <a href="#" className="logo">
+          <a href="/" className="logo">
             総額葬儀
           </a>
           <a href="tel:0138-XX-XXXX" className="contact-phone">
@@ -168,12 +168,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
-  );
-}
-      {
-        /* FAQ */
-      }
+
+      {/* FAQ */}
       <section className="faq" id="faq">
         <div className="container">
           <h2>よくある不安・質問</h2>
@@ -240,11 +236,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>;
+      </section>
 
-      {
-        /* ご利用事例 */
-      }
+      {/* ご利用者の声・事例 */}
       <section className="case-studies" id="cases">
         <div className="container">
           <h2>ご利用者の声・事例</h2>
@@ -259,6 +253,7 @@ export default function Home() {
               </p>
               <small>函館市 T.S様 60代</small>
             </div>
+
             <div className="case-card">
               <img src="/api/placeholder/150/150" alt="ご利用者の写真" />
               <p className="case-price">
@@ -269,6 +264,7 @@ export default function Home() {
               </p>
               <small>函館市 K.M様 50代</small>
             </div>
+
             <div className="case-card">
               <img src="/api/placeholder/150/150" alt="ご利用者の写真" />
               <p className="case-price">
@@ -281,11 +277,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>;
+      </section>
 
-      {
-        /* 会社紹介 */
-      }
+      {/* 運営会社・担当者の紹介 */}
       <section className="about" id="about">
         <div className="container">
           <h2>運営会社・担当者の紹介</h2>
@@ -306,11 +300,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>;
+      </section>
 
-      {
-        /* お問い合わせ */
-      }
+      {/* お問い合わせ */}
       <section className="contact" id="contact">
         <div className="container">
           <h2>ご相談・お問い合わせ</h2>
@@ -378,217 +370,9 @@ export default function Home() {
             </form>
           </div>
         </div>
-      </section>;
-      {
-        /* FAQ */
-      }
-      <section className="faq" id="faq">
-        <div className="container">
-          <h2>よくある不安・質問</h2>
-          <div className="accordion">
-            <div className="accordion-item">
-              <div className="accordion-header">
-                急な変更があったら追加料金がかかるのでは？ <span>+</span>
-              </div>
-              <div className="accordion-content">
-                <p>
-                  総額葬儀では、見積もり後の追加費用は一切発生しません。参列者が増えた場合や、当日の追加オプションが発生した場合でも、提示した金額内でご対応します。これが「総額保証」の最大の特徴です。
-                </p>
-                <p>
-                  ただし、事前に計画されていない大幅な内容変更（例：家族葬から一般葬への変更など）の場合は、改めてお見積りをさせていただくことがあります。
-                </p>
-              </div>
-            </div>
+      </section>
 
-            <div className="accordion-item">
-              <div className="accordion-header">
-                総額に含まれるものは？含まれないものは？ <span>+</span>
-              </div>
-              <div className="accordion-content">
-                <p>
-                  <strong>含まれるもの：</strong>
-                </p>
-                <ul>
-                  <li>火葬料金</li>
-                  <li>式場使用料</li>
-                  <li>棺・祭壇費用</li>
-                  <li>ご遺体の搬送・安置費用</li>
-                  <li>司会進行費用</li>
-                  <li>返礼品（選択した場合）</li>
-                  <li>料理・飲み物（選択した場合）</li>
-                </ul>
-                <p>
-                  <strong>含まれないもの：</strong>
-                </p>
-                <ul>
-                  <li>宗教者へのお礼（お布施等）</li>
-                  <li>墓地・墓石費用</li>
-                  <li>仏壇・仏具の購入費用</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="accordion-item">
-              <div className="accordion-header">
-                どんな葬儀社を紹介されるの？ <span>+</span>
-              </div>
-              <div className="accordion-content">
-                <p>総額葬儀では、以下の厳格な基準で葬儀社を選定しています：</p>
-                <ul>
-                  <li>函館市内に拠点があること</li>
-                  <li>業界経験5年以上の責任者がいること</li>
-                  <li>24時間対応可能なこと</li>
-                  <li>明朗会計の理念に賛同していること</li>
-                  <li>過去の利用者からの評価が高いこと</li>
-                </ul>
-                <p>
-                  現在、函館市内で5社の葬儀社と提携しており、すべての葬儀社が総額葬儀の品質基準を満たしています。ご希望に合わせて最適な葬儀社をご紹介します。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>;
-      {
-        /* ご利用者の声・事例 */
-      }
-      <section className="case-studies" id="cases">
-        <div className="container">
-          <h2>ご利用者の声・事例</h2>
-          <div className="cases-container">
-            <div className="case-card">
-              <img src="/api/placeholder/150/150" alt="ご利用者の写真" />
-              <p className="case-price">
-                家族葬：15名参列、<strong>総額58万円</strong>
-              </p>
-              <p>
-                「見積りどおりの金額で、丁寧な対応をしていただきました。追加費用の心配がなかったので、大切な時間に集中できました。」
-              </p>
-              <small>函館市 T.S様 60代</small>
-            </div>
-
-            <div className="case-card">
-              <img src="/api/placeholder/150/150" alt="ご利用者の写真" />
-              <p className="case-price">
-                一般葬：40名参列、<strong>総額98万円</strong>
-              </p>
-              <p>
-                「最初は不安でしたが、総額葬儀で紹介された葬儀社の対応は素晴らしく、金額も当初の見積り通りでした。安心してお任せできました。」
-              </p>
-              <small>函館市 K.M様 50代</small>
-            </div>
-
-            <div className="case-card">
-              <img src="/api/placeholder/150/150" alt="ご利用者の写真" />
-              <p className="case-price">
-                家族葬：8名参列、<strong>総額42万円</strong>
-              </p>
-              <p>
-                「シンプルな内容でしたが、故人の人柄に合った温かい葬儀ができました。予算内で収まり、安心感がありました。」
-              </p>
-              <small>函館市 Y.T様 40代</small>
-            </div>
-          </div>
-        </div>
-      </section>;
-       {
-         /* 会社紹介 */
-       }
-       <section className="about" id="about">
-         <div className="container">
-           <h2>運営会社・担当者の紹介</h2>
-           <div className="about-container">
-             <img
-               src="/api/placeholder/300/300"
-               alt="代表者の写真"
-               className="about-image"
-             />
-             <div>
-               <h3>代表</h3>
-               <p>
-                 函館で葬儀業界に携わってきました。その中で、多くの方が葬儀費用の「あとから追加」に不安や不満を感じていることを知りました。
-               </p>
-               <p>
-                 総額葬儀は、大切な方とのお別れの時間に、金銭的な心配をせずに集中していただきたいという想いから生まれました。函館の皆様に、透明性のある、安心できる葬儀サービスを提供することが私たちの使命です。
-               </p>
-             </div>
-           </div>
-         </div>
-       </section>;
-      {
-        /* お問い合わせ */
-      }
-      <section className="contact" id="contact">
-        <div className="container">
-          <h2>ご相談・お問い合わせ</h2>
-          <div className="contact-container">
-            <div className="contact-info">
-              <p>
-                24時間いつでもご相談を受け付けております。お気軽にお問い合わせください。
-              </p>
-              <a href="tel:0138-XX-XXXX" className="contact-phone-large">
-                📞 0138-XX-XXXX
-              </a>
-            </div>
-
-            <div className="contact-options">
-              <div className="contact-option">
-                <a href="#" className="btn line-button">
-                  LINEで相談する
-                </a>
-              </div>
-            </div>
-
-            <form id="contactForm">
-              <div className="form-group">
-                <label htmlFor="name">お名前</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="form-control"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="phone">電話番号</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="form-control"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="contact-type">ご希望の連絡方法</label>
-                <select id="contact-type" className="form-control">
-                  <option value="phone">電話</option>
-                  <option value="line">LINE</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">ご状況・ご要望</label>
-                <textarea
-                  id="message"
-                  className="form-control"
-                  rows={5}
-                ></textarea>
-              </div>
-
-              <div className="text-center">
-                <button type="submit" className="btn btn-primary">
-                  送信する
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>;
-      {
-        /* フッター */
-      }
+      {/* フッター */}
       <footer>
         <div className="container">
           <div className="footer-container">
@@ -632,4 +416,7 @@ export default function Home() {
             &copy; {new Date().getFullYear()} 総額葬儀 All rights reserved.
           </div>
         </div>
-      </footer>;
+      </footer>
+    </>
+  );
+}
