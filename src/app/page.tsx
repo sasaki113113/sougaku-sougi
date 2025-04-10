@@ -1,12 +1,15 @@
+import Link from "next/link";
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
       {/* ヘッダー */}
       <header className="header">
         <div className="header-container container">
-          <a href="/" className="logo">
+          <Link href="/" className="logo">
             総額葬儀
-          </a>
+          </Link>
           <a href="tel:0138-XX-XXXX" className="contact-phone">
             📞 0138-XX-XXXX
           </a>
@@ -40,10 +43,13 @@ export default function Home() {
         <div className="container">
           <h2>なぜ総額葬儀なのか</h2>
           <div className="problem-container">
-            <img
+            <Image
               src="/api/placeholder/400/320"
               alt="問題のイメージ"
               className="problem-image"
+              width={400}
+              height={320}
+              style={{ objectFit: "cover" }} // レイアウトシフトを防ぐためのスタイル
             />
             <div>
               <p>
@@ -244,7 +250,13 @@ export default function Home() {
           <h2>ご利用者の声・事例</h2>
           <div className="cases-container">
             <div className="case-card">
-              <img src="/api/placeholder/150/150" alt="ご利用者の写真" />
+              <Image
+                src="/api/placeholder/150/150"
+                alt="ご利用者の写真"
+                width={150}
+                height={150}
+                style={{ objectFit: "cover" }}
+              />
               <p className="case-price">
                 家族葬：15名参列、<strong>総額58万円</strong>
               </p>
@@ -255,7 +267,13 @@ export default function Home() {
             </div>
 
             <div className="case-card">
-              <img src="/api/placeholder/150/150" alt="ご利用者の写真" />
+              <Image
+                src="/api/placeholder/150/150"
+                alt="ご利用者の写真"
+                width={150}
+                height={150}
+                style={{ objectFit: "cover" }}
+              />
               <p className="case-price">
                 一般葬：40名参列、<strong>総額98万円</strong>
               </p>
@@ -266,7 +284,13 @@ export default function Home() {
             </div>
 
             <div className="case-card">
-              <img src="/api/placeholder/150/150" alt="ご利用者の写真" />
+              <Image
+                src="/api/placeholder/150/150"
+                alt="ご利用者の写真"
+                width={150}
+                height={150}
+                style={{ objectFit: "cover" }}
+              />
               <p className="case-price">
                 家族葬：8名参列、<strong>総額42万円</strong>
               </p>
@@ -284,10 +308,13 @@ export default function Home() {
         <div className="container">
           <h2>運営会社・担当者の紹介</h2>
           <div className="about-container">
-            <img
+            <Image
               src="/api/placeholder/300/300"
               alt="代表者の写真"
               className="about-image"
+              width={300}
+              height={300}
+              style={{ objectFit: "cover" }}
             />
             <div>
               <h3>代表 佐藤 誠</h3>
