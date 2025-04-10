@@ -51,7 +51,7 @@ export default function Home() {
         <h1 style={{ fontSize: "2.2rem", marginBottom: "20px" }}>
           追加料金なし、驚きなし。
           <br />
-          函館の葬儀は"総額葬儀"で
+          函館の葬儀は「総額葬儀」で
         </h1>
         <p
           style={{
