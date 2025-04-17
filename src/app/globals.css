@@ -509,3 +509,5 @@ footer {
         margin-bottom: 0;
     }
 }
+
+@import './styles/simulator.css';

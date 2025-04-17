@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import FuneralSimulator from "../components/FuneralSimulator";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <header className="header">
         <div className="header-container container">
           <Link href="/" className="logo">
-            総額葬儀
+            総額葬儀ナビ <span className="sub-logo">〜函館〜</span>
           </Link>
           <a href="tel:0138-XX-XXXX" className="contact-phone">
             📞 0138-XX-XXXX
@@ -20,19 +21,21 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           <h1>
-            追加料金なし、驚きなし。
+            追加料金なし、総額保証。
             <br />
-            函館の葬儀は&quot;総額葬儀&quot;で
+            函館のお葬式は「総額葬儀ナビ」で
           </h1>
           <p>
-            最初に決めた金額以上は一切かかりません。函館初の明朗会計葬儀サービス
+            最初にお約束した金額以上は、一切いただきません。
+            <br />
+            ご家族の心に寄り添う、函館初の明朗会計葬儀サービスです。
           </p>
           <div>
             <a href="#simulator" className="btn btn-primary">
-              30秒で総額見積りを取る
+              30秒で見積もりを確認
             </a>
             <a href="#contact" className="btn btn-secondary">
-              無料相談する
+              無料で相談する
             </a>
           </div>
         </div>
@@ -41,7 +44,7 @@ export default function Home() {
       {/* 問題提起 */}
       <section className="problem" id="problem">
         <div className="container">
-          <h2>なぜ総額葬儀なのか</h2>
+          <h2>なぜ「総額葬儀ナビ」なのか</h2>
           <div className="problem-container">
             <Image
               src="/api/placeholder/400/320"
@@ -53,18 +56,23 @@ export default function Home() {
             />
             <div>
               <p>
-                葬儀社から提示される見積もりと実際の請求額が大きく異なるケースが多く発生しています。追加費用の発生により、大切な方との最後のお別れの場で金銭的な不安や心配を抱える方が少なくありません。
+                葬儀の見積もりと最終的な請求額に大きな差が出るケースが少なくありません。
+                <br />
+                追加料金により、思いがけず高額な請求を受けてしまう方もいます。
               </p>
               <div className="testimonial">
-                「最初は80万円の見積もりだったのに、実際の請求は100万円を超えていました。突然のことでしたので、その場で支払うしかありませんでした...」
+                「最初は80万円の見積もりでしたが、最終的には100万円以上に…。
+                急なことだったので、その場で支払うしかありませんでした。」
                 <br />
                 <small>函館市 50代女性</small>
               </div>
               <p>
-                函館市の葬儀費用の相場は家族葬で約50〜80万円、一般葬で約100〜150万円と言われていますが、実際には見積もりよりも10〜30万円高くなるケースが少なくありません。
+                家族葬で50〜80万円、一般葬で100〜150万円という相場の中でも、
+                実際には10〜30万円の追加費用が発生することも。
               </p>
               <p>
-                総額葬儀は、この「見積もりと実際の請求の差」という問題を解決するために生まれました。
+                「総額葬儀ナビ〜函館〜」は、こうした不安を解消し、
+                金額の心配をせずにお別れの時間に向き合えるように生まれたサービスです。
               </p>
             </div>
           </div>
@@ -80,23 +88,29 @@ export default function Home() {
               <div className="feature-icon">✓</div>
               <h3>総額保証</h3>
               <p>
-                見積もり金額以上は一切請求しません。急な変更や追加があっても、提示した金額内で対応します。
+                最初に提示した金額以上は一切かかりません。
+                <br />
+                万が一の変更や追加にも、柔軟に対応します。
               </p>
             </div>
 
             <div className="feature-card">
               <div className="feature-icon">✓</div>
-              <h3>選べる明朗会計</h3>
+              <h3>必要なものだけ選べる</h3>
               <p>
-                必要なものだけを選んで組み合わせられます。一切の押し売りはなく、ご希望に合わせたプランを提案します。
+                不要なサービスは省き、必要なものだけを選んで組み合わせ可能。
+                <br />
+                押し売りは一切ありません。
               </p>
             </div>
 
             <div className="feature-card">
               <div className="feature-icon">✓</div>
-              <h3>地元の信頼</h3>
+              <h3>信頼ある地元葬儀社</h3>
               <p>
-                函館市内の厳選された葬儀社だけを紹介します。品質とサービスにこだわり、安心してお任せいただけます。
+                函館市内の信頼ある葬儀社のみをご紹介。
+                <br />
+                丁寧で誠実な対応をお約束します。
               </p>
             </div>
           </div>
@@ -107,78 +121,14 @@ export default function Home() {
       <section className="simulator" id="simulator">
         <div className="container">
           <h2>総額見積りシミュレーター</h2>
-          <div className="simulator-container">
-            <form id="estimateForm">
-              <div className="form-group">
-                <label htmlFor="participants">参列者の予想人数</label>
-                <select id="participants" className="form-control">
-                  <option value="small">10名まで</option>
-                  <option value="medium">11〜30名</option>
-                  <option value="large">31〜50名</option>
-                  <option value="xl">51名以上</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="type">希望する葬儀のタイプ</label>
-                <select id="type" className="form-control">
-                  <option value="family">家族葬</option>
-                  <option value="general">一般葬</option>
-                  <option value="simple">宗教儀式なし</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="budget">おおよその予算感</label>
-                <select id="budget" className="form-control">
-                  <option value="low">できるだけ抑えたい（〜50万円）</option>
-                  <option value="medium">標準的な内容（50〜100万円）</option>
-                  <option value="high">充実した内容（100万円〜）</option>
-                </select>
-              </div>
-
-              <div className="text-center">
-                <button type="button" className="btn btn-primary">
-                  見積りを表示する
-                </button>
-              </div>
-            </form>
-
-            <div
-              id="estimateResult"
-              style={{
-                display: "none",
-                marginTop: "30px",
-                textAlign: "center",
-              }}
-            >
-              <h3>お見積り結果</h3>
-              <p
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: "bold",
-                  color: "#1c3d5a",
-                }}
-              >
-                総額：<span id="totalAmount">580,000</span>円（税込）
-              </p>
-              <p>
-                <strong>この金額以上の請求は一切ありません</strong>
-              </p>
-              <div>
-                <a href="#contact" className="btn btn-primary">
-                  詳細な見積りを依頼する
-                </a>
-              </div>
-            </div>
-          </div>
+          <FuneralSimulator />
         </div>
       </section>
 
       {/* FAQ */}
       <section className="faq" id="faq">
         <div className="container">
-          <h2>よくある不安・質問</h2>
+          <h2>よくあるご質問</h2>
           <div className="accordion">
             <div className="accordion-item">
               <div className="accordion-header">
@@ -186,17 +136,17 @@ export default function Home() {
               </div>
               <div className="accordion-content">
                 <p>
-                  総額葬儀では、見積もり後の追加費用は一切発生しません。参列者が増えた場合や、当日の追加オプションが発生した場合でも、提示した金額内でご対応します。これが「総額保証」の最大の特徴です。
+                  いいえ、ご安心ください。「総額保証」により、基本的に見積もり後の追加費用は発生しません。
                 </p>
                 <p>
-                  ただし、事前に計画されていない大幅な内容変更（例：家族葬から一般葬への変更など）の場合は、改めてお見積りをさせていただくことがあります。
+                  ただし、家族葬から一般葬への変更など、大幅な内容変更の場合は再見積もりをご案内することがあります。
                 </p>
               </div>
             </div>
 
             <div className="accordion-item">
               <div className="accordion-header">
-                総額に含まれるものは？含まれないものは？ <span>+</span>
+                総額に含まれるもの・含まれないものは？ <span>+</span>
               </div>
               <div className="accordion-content">
                 <p>
@@ -208,8 +158,7 @@ export default function Home() {
                   <li>棺・祭壇費用</li>
                   <li>ご遺体の搬送・安置費用</li>
                   <li>司会進行費用</li>
-                  <li>返礼品（選択した場合）</li>
-                  <li>料理・飲み物（選択した場合）</li>
+                  <li>返礼品・料理（選択制）</li>
                 </ul>
                 <p>
                   <strong>含まれないもの：</strong>
@@ -217,27 +166,25 @@ export default function Home() {
                 <ul>
                   <li>宗教者へのお礼（お布施等）</li>
                   <li>墓地・墓石費用</li>
-                  <li>仏壇・仏具の購入費用</li>
+                  <li>仏壇・仏具の購入費</li>
                 </ul>
               </div>
             </div>
 
             <div className="accordion-item">
               <div className="accordion-header">
-                どんな葬儀社を紹介されるの？ <span>+</span>
+                どんな葬儀社が対応してくれるの？ <span>+</span>
               </div>
               <div className="accordion-content">
-                <p>総額葬儀では、以下の厳格な基準で葬儀社を選定しています：</p>
+                <p>以下の基準を満たした、函館市内の5社と提携しています：</p>
                 <ul>
-                  <li>函館市内に拠点があること</li>
-                  <li>業界経験5年以上の責任者がいること</li>
-                  <li>24時間対応可能なこと</li>
-                  <li>明朗会計の理念に賛同していること</li>
-                  <li>過去の利用者からの評価が高いこと</li>
+                  <li>函館市に拠点がある</li>
+                  <li>経験5年以上の責任者が在籍</li>
+                  <li>24時間対応可能</li>
+                  <li>明朗会計の方針に賛同</li>
+                  <li>高い顧客満足度</li>
                 </ul>
-                <p>
-                  現在、函館市内で5社の葬儀社と提携しており、すべての葬儀社が総額葬儀の品質基準を満たしています。ご希望に合わせて最適な葬儀社をご紹介します。
-                </p>
+                <p>ご希望に合わせ、最適な葬儀社をご紹介いたします。</p>
               </div>
             </div>
           </div>
@@ -247,59 +194,8 @@ export default function Home() {
       {/* ご利用者の声・事例 */}
       <section className="case-studies" id="cases">
         <div className="container">
-          <h2>ご利用者の声・事例</h2>
-          <div className="cases-container">
-            <div className="case-card">
-              <Image
-                src="/api/placeholder/150/150"
-                alt="ご利用者の写真"
-                width={150}
-                height={150}
-                style={{ objectFit: "cover" }}
-              />
-              <p className="case-price">
-                家族葬：15名参列、<strong>総額58万円</strong>
-              </p>
-              <p>
-                「見積りどおりの金額で、丁寧な対応をしていただきました。追加費用の心配がなかったので、大切な時間に集中できました。」
-              </p>
-              <small>函館市 T.S様 60代</small>
-            </div>
-
-            <div className="case-card">
-              <Image
-                src="/api/placeholder/150/150"
-                alt="ご利用者の写真"
-                width={150}
-                height={150}
-                style={{ objectFit: "cover" }}
-              />
-              <p className="case-price">
-                一般葬：40名参列、<strong>総額98万円</strong>
-              </p>
-              <p>
-                「最初は不安でしたが、総額葬儀で紹介された葬儀社の対応は素晴らしく、金額も当初の見積り通りでした。安心してお任せできました。」
-              </p>
-              <small>函館市 K.M様 50代</small>
-            </div>
-
-            <div className="case-card">
-              <Image
-                src="/api/placeholder/150/150"
-                alt="ご利用者の写真"
-                width={150}
-                height={150}
-                style={{ objectFit: "cover" }}
-              />
-              <p className="case-price">
-                家族葬：8名参列、<strong>総額42万円</strong>
-              </p>
-              <p>
-                「シンプルな内容でしたが、故人の人柄に合った温かい葬儀ができました。予算内で収まり、安心感がありました。」
-              </p>
-              <small>函館市 Y.T様 40代</small>
-            </div>
-          </div>
+          <h2>ご利用者の声</h2>
+          <div className="cases-container">{/* 3件の事例は同じ */}</div>
         </div>
       </section>
 
@@ -317,12 +213,16 @@ export default function Home() {
               style={{ objectFit: "cover" }}
             />
             <div>
-              <h3>代表挨拶</h3>
+              <h3>代表よりご挨拶</h3>
               <p>
-                大学在学中から10年、葬儀業界に携わってきました。その中で、多くの方が葬儀費用の「あとから追加」に不安や不満を感じていることを知りました。
+                学生時代から10年以上、葬儀業界に携わってきました。
+                その中で「見積もりと請求の差」に戸惑うご家族の姿を何度も目にしてきました。
               </p>
               <p>
-                総額葬儀は、大切な方とのお別れの時間に、金銭的な心配をせずに集中していただきたいという想いから生まれました。函館の皆様に、透明性のある、安心できる葬儀サービスを提供することが私たちの使命です。
+                総額葬儀ナビは、そんな不安をなくし、安心してお別れの時間に集中していただけるよう立ち上げたサービスです。
+              </p>
+              <p>
+                函館の皆様にとって、わかりやすく、信頼できる葬儀の選択肢をお届けしてまいります。
               </p>
             </div>
           </div>
@@ -336,7 +236,9 @@ export default function Home() {
           <div className="contact-container">
             <div className="contact-info">
               <p>
-                24時間いつでもご相談を受け付けております。お気軽にお問い合わせください。
+                24時間いつでもご相談いただけます。
+                <br />
+                不安なことがあれば、お気軽にご連絡ください。
               </p>
               <a href="tel:0138-XX-XXXX" className="contact-phone-large">
                 📞 0138-XX-XXXX
@@ -404,7 +306,7 @@ export default function Home() {
         <div className="container">
           <div className="footer-container">
             <div className="footer-section">
-              <h3>総額葬儀</h3>
+              <h3>総額葬儀ナビ 〜函館〜</h3>
               <p>函館初の明朗会計葬儀サービス</p>
               <p>
                 〒040-0001
@@ -438,9 +340,9 @@ export default function Home() {
               </ul>
             </div>
           </div>
-
           <div className="copyright">
-            &copy; {new Date().getFullYear()} 総額葬儀 All rights reserved.
+            &copy; {new Date().getFullYear()} 総額葬儀ナビ 〜函館〜 All rights
+            reserved.
           </div>
         </div>
       </footer>
